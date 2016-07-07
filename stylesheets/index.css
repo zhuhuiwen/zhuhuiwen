@@ -1,0 +1,40 @@
+.site-nav{
+	height: 30px;
+	line-height: 30px;
+	background-color: #f1f1f1;
+}
+.site-nav-send{
+	padding: 0 25px 0 10px;
+	position: relative;
+}
+.site-nav-send:hover{
+	background-color: white;
+	/*鼠标上去的时候有边框*/
+	padding: 0 24px 0 9px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.site-nav-send i{
+	position: absolute;
+	right: 5px;
+	top: 15px;
+	width: 15px;
+	height: 8px;
+	font:400 15px/15px "consolas";
+	overflow: hidden;
+}
+.site-nav-send s{
+	position: absolute;
+	top: -7px;
+}
+.nav-site-r li{
+	float: left;
+	padding: 0 10px;
+}
+.nav-site-r .line{
+	width: 1px;
+	height: 12px;
+	background-color: #dddddd;	
+	margin-top: 9px;
+	padding: 0;
+}

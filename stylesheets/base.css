@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+
+    /*site-nav部分start*/
+    /* .site-nav {
+        height: 30px;
+        line-height: 30px;
+        background-color: #F1F1F1;
+    }
+   .site-nav-send,
+    .site-nav-r .fore {
+        padding: 0 25px 0 10px;
+        position: relative;
+    }
+    .site-nav-send:hover {
+        background-color: #fff;
+    }
+    .site-nav-send i,
+    .fore i {
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        width: 15px;
+        height: 8px;
+        font: 400 15px/15px "consolas";
+        overflow: hidden;
+    }
+    .site-nav-send s,
+    .fore s {
+        position: absolute;
+        top: -7px;
+    }
+    .site-nav-r li {
+        float: left;
+        padding: 0 10px;
+    }
+    .site-nav-r .line {
+        width: 1px;
+        height: 12px;
+        background-color: #DDDDDD;
+        margin-top: 9px;
+        padding: 0;
+    }
+    .site-nav-r .jd-tel {
+        padding-left: 25px;
+    }
+    .tel {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 15px;
+        height: 20px;
+        background: url("../images/tel.png") no-repeat;
+    }
+    /*site-nav部分end*/
+
+    /*topbanner部分start*/
+    .topbanner {
+        background-color: #C81622;
+    }
+    .tp {
+        position: relative;
+    }
+    .close-banner {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 19px;
+        height: 19px;
+        background: url(../images/closebanner.png) no-repeat;
+    }
+    .close-banner:hover {
+        background-position: bottom;
+    }
+    /*topbanner部分end*/
+
+    /*search部分start*/
+    .search-logo {
+        width: 362px;
+        height: 60px;
+        float: left;
+        padding: 20px 0;
+    }
+    .search-logo a {
+        display: block;
+        width: 270px;
+        height: 60px;
+        background: url(../images/logo.png) no-repeat;
+        text-indent: -99999em;
+    }
+
+    .search-input {
+        width: 538px;
+        height: 61px;
+        float: left;
+        background-color: blue;
+        cursor: move;
+    }
+    .search-car {
+        width: 139px;
+        height: 34px;
+        float: right;
+        margin: 25px 65px 0 0;
+        border: 1px solid #DFDFDF;
+    }
+    .search-more {
+        width: 500px;
+        height: 28px;
+        line-height: 28px;
+        float: left;
+        background-color: yellow;
+    }
+
+    /*search部分end*/
+
+    /*site-nav部分start*/
+    /*site-nav部分end*/
+
+    /*site-nav部分start*/
+    /*site-nav部分end*/*/
