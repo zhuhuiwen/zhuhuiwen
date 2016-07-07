@@ -85,18 +85,67 @@
  	text-indent: -1000px;
  }
  .search-input{
- 	width: 538px;
- 	height: 61px;
- 	background-color: green;
+ 	/*width: 538px;会掉下来*/
+ 	height: 36px;/*61-25*/
  	float: left;
+ 	padding-top:25px;
+ }
+ .search-input input{
+ 	float: left;
+ 	width: 450px;/*454-4*/
+ 	height: 32px;
+ 	border:2px solid #b61d1d;
+ 	border-right:none;
+ 	padding-left: 4px;/*设置框里面的距离*/
+ 	font-size: 14px;
+ 	line-height: 32px;
+ 	color: #666666;
+ }
+ .search-input button{
+ 	float: left;
+ 	width: 82px;
+ 	height: 36px;
+ 	background-color: #b61d1d;
+ 	font-size: 16px;
+ 	color: #ffffff;
+ 	font-weight: 700;
+ 	cursor: pointer;
  }
  .search-car{
-	width: 139px;
-	height: 34px;
+	width: 96px;/*139-43*/
+	height: 34px;/*34-10*/
 	border:1px solid #dfdfdf;
 	float: right;
 	margin-top: 25px;
 	margin-right: 65px;
+	line-height:34px;
+	padding-left: 43px; 
+	position: relative;
+ }
+ .search-car-icon1{
+ 	position: absolute;
+ 	top: 10px;
+ 	left: 19px;
+ 	width: 18px;
+ 	height: 18px;
+ 	background: url("../img/tel.png") -1px -58px;
+ }
+ .search-car-icon2{
+ 	position: absolute;
+ 	right: 10px;
+ 	font: 400 13px/34px "simsun";
+ }
+ .search-car-icon3{
+ 	position: absolute;
+ 	top: -6px;
+ 	width: 16px;
+ 	height: 14px;
+ 	line-height: 14px;
+ 	color: #efffdf;
+ 	text-align: center;
+ 	background-color: #c81623;
+ 	border-radius: 7px 7px 7px 0;
+
  }
  .search-more{
  	width: 500px;
