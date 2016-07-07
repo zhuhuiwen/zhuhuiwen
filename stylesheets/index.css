@@ -3,7 +3,7 @@
 	line-height: 30px;
 	background-color: #f1f1f1;
 }
-.site-nav-send{
+.site-nav-send,.nav-site-r .fore{
 	padding: 0 25px 0 10px;
 	position: relative;
 }
@@ -14,7 +14,7 @@
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 }
-.site-nav-send i{
+.site-nav-send i,.fore i{
 	position: absolute;
 	right: 5px;
 	top: 15px;
@@ -23,7 +23,7 @@
 	font:400 15px/15px "consolas";
 	overflow: hidden;
 }
-.site-nav-send s{
+.site-nav-send s,.fore s{
 	position: absolute;
 	top: -7px;
 }
