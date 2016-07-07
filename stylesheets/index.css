@@ -1,9 +1,10 @@
+/* site-nav B*/
 .site-nav{
 	height: 30px;
 	line-height: 30px;
 	background-color: #f1f1f1;
 }
-.site-nav-send,.nav-site-r .fore{
+.site-nav-send,.site-nav-r .fore{
 	padding: 0 25px 0 10px;
 	position: relative;
 }
@@ -27,14 +28,81 @@
 	position: absolute;
 	top: -7px;
 }
-.nav-site-r li{
+.site-nav-r li{
 	float: left;
 	padding: 0 10px;
 }
-.nav-site-r .line{
+.site-nav-r .line{
 	width: 1px;
 	height: 12px;
 	background-color: #dddddd;	
 	margin-top: 9px;
 	padding: 0;
 }
+.site-nav-r .jd-tel {
+	padding-left: 25px;
+}
+ .site-nav-r .jd-tel .tel{
+ 	position: absolute;
+ 	top: 5px;
+ 	left: 5px;
+	width: 15px;
+	height: 20px;
+	background: url("../img/tel.png") no-repeat;
+ }
+/* site-nav E*/
+/* topbanner B*/
+ .topbanner{
+ 	background-color: #c81622;
+ }
+ .tp{
+ 	position: relative;
+ }
+ .closebanner{
+ 	position: absolute;
+ 	top: 5px;
+ 	right: 5px;
+ 	width: 19px;
+ 	height: 19px;
+ 	background: url("../img/closebanner.png") no-repeat 0 0;
+ }
+ .closebanner:hover{
+ 	background: url("../img/closebanner.png") no-repeat 0 -19px;
+ }
+ /* topbanner E*/
+ /*search B*/
+ .search-logo{
+ 	width: 360px;
+ 	height: 60px;/*100-20-20*/
+ 	padding: 20px 0;
+ 	float: left;
+ }
+ .search-logo a{
+ 	width: 270px;
+ 	height: 60px;
+ 	display: inline-block;
+ 	background: url("../img/logo.png") no-repeat;
+ 	text-indent: -1000px;
+ }
+ .search-input{
+ 	width: 538px;
+ 	height: 61px;
+ 	background-color: green;
+ 	float: left;
+ }
+ .search-car{
+	width: 139px;
+	height: 34px;
+	border:1px solid #dfdfdf;
+	float: right;
+	margin-top: 25px;
+	margin-right: 65px;
+ }
+ .search-more{
+ 	width: 500px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+	background-color: pink;
+ }
+/*search E*/
