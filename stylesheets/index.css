@@ -179,10 +179,32 @@
 .slogan4{
 	margin-left: 302px;
 }
-.footer-top-shopping dt{
-	font: 400 16px/35px "微软雅黑";
+.footer-top-shopping dl{
+	float: left;
+	width: 199px;
+}
+.footer-top-shopping dt,.jd-coverage h3{
+	line-height: 35px;
+	font:400 16px/35px "微软雅黑";
 }
 .footer-top-shopping dd{
 	line-height: 20px;
+}
+.footer-top-shopping .last-dl{
+	width: 100px;
+}
+.jd-coverage{
+	float: right;
+    width: 203px;
+    height: 168px;
+	background: url("../img/china.png") no-repeat left bottom;
+	margin-right: 44px;
+	padding-left: 18px;
+}
+.jd-coverage a{
+	float: right;
+}
+.jd-coverage p{
+	padding-top: 8px;
 }
 /*footer E*/
