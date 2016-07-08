@@ -120,3 +120,232 @@ s, i, em {
 .hide {
     display: none
 }
+/*下面是网站的base部分*/
+/* site-nav B*/
+.site-nav{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+}
+.site-nav-send,.site-nav-r .fore{
+    padding: 0 25px 0 10px;
+    position: relative;
+}
+.site-nav-send:hover{
+    background-color: white;
+    /*鼠标上去的时候有边框*/
+    padding: 0 24px 0 9px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.site-nav-send i,.fore i{
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 15px;
+    height: 8px;
+    font:400 15px/15px "consolas";
+    overflow: hidden;
+}
+.site-nav-send s,.fore s{
+    position: absolute;
+    top: -7px;
+}
+.site-nav-r li{
+    float: left;
+    padding: 0 10px;
+}
+.site-nav-r .line{
+    width: 1px;
+    height: 12px;
+    background-color: #dddddd;  
+    margin-top: 9px;
+    padding: 0;
+}
+.site-nav-r .jd-tel {
+    padding-left: 25px;
+}
+ .site-nav-r .jd-tel .tel{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 20px;
+    background: url("../img/tel.png") no-repeat;
+ }
+/* site-nav E*/
+/* topbanner B*/
+ .topbanner{
+    background-color: #c81622;
+ }
+ .tp{
+    position: relative;
+ }
+ .closebanner{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 19px;
+    height: 19px;
+    background: url("../img/closebanner.png") no-repeat 0 0;
+ }
+ .closebanner:hover{
+    background: url("../img/closebanner.png") no-repeat 0 -19px;
+ }
+ /* topbanner E*/
+ /*search B*/
+ .search-logo{
+    width: 360px;
+    height: 60px;/*100-20-20*/
+    padding: 20px 0;
+    float: left;
+ }
+ .search-logo a{
+    width: 270px;
+    height: 60px;
+    display: inline-block;
+    background: url("../img/logo.png") no-repeat;
+    text-indent: -1000px;
+ }
+ .search-input{
+    /*width: 538px;会掉下来*/
+    height: 36px;/*61-25*/
+    float: left;
+    padding-top:25px;
+ }
+ .search-input input{
+    float: left;
+    width: 450px;/*454-4*/
+    height: 32px;
+    border:2px solid #b61d1d;
+    border-right:none;
+    padding-left: 4px;/*设置框里面的距离*/
+    font-size: 14px;
+    line-height: 32px;
+    color: #666666;
+ }
+ .search-input button{
+    float: left;
+    width: 82px;
+    height: 36px;
+    background-color: #b61d1d;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+ }
+ .search-car{
+    width: 96px;/*139-43*/
+    height: 34px;/*34-10*/
+    border:1px solid #dfdfdf;
+    float: right;
+    margin-top: 25px;
+    margin-right: 65px;
+    line-height:34px;
+    padding-left: 43px; 
+    position: relative;
+ }
+ .search-car-icon1{
+    position: absolute;
+    top: 10px;
+    left: 19px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/tel.png") -1px -58px;
+ }
+ .search-car-icon2{
+    position: absolute;
+    right: 10px;
+    font: 400 13px/34px "simsun";
+ }
+ .search-car-icon3{
+    position: absolute;
+    top: -6px;
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    color: #efffdf;
+    text-align: center;
+    background-color: #c81623;
+    border-radius: 7px 7px 7px 0;
+
+ }
+ .search-more{
+    width: 500px;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+ }
+ .search-more a{
+    margin-right: 7px;
+ }
+/*search E*/
+/*footer B*/
+.footer-top-slogan{
+    height: 94px;
+    background-color: #f5f5f5;
+    position: relative;
+    margin-bottom: 14px;
+}
+.slogan {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+.slogan1{
+    margin-left: -604px;
+}
+.slogan2{
+    margin-left: -302px;
+}
+.slogan4{
+    margin-left: 302px;
+}
+.footer-top-shopping dl{
+    float: left;
+    width: 199px;
+}
+.footer-top-shopping dt,.jd-coverage h3{
+    line-height: 35px;
+    font:400 16px/35px "微软雅黑";
+}
+.footer-top-shopping dd{
+    line-height: 20px;
+}
+.footer-top-shopping .last-dl{
+    width: 100px;
+}
+.jd-coverage{
+    float: right;
+    width: 203px;
+    height: 168px;
+    background: url("../img/china.png") no-repeat left bottom;
+    margin-right: 44px;
+    padding-left: 18px;
+}
+.jd-coverage a{
+    float: right;
+}
+.jd-coverage p{
+    padding-top: 8px;
+}
+.footer-bootom{
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+    text-align: center;
+    padding:20px 0 30px;
+}
+.footer-bootom-links a{
+    margin: 0 12px;
+}
+.footer-bootom-copyright{
+    padding: 10px 0;
+}
+.footer-bootom-copyright a{
+    line-height: 20px;
+    font-size: 12px;
+}
+.footer-bootom-pic img{
+    margin-right: 13px;
+}
+/*footer E*/
