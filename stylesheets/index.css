@@ -24,8 +24,36 @@
 }
 .nav-shortcut-one{
 	width: 210px;
-	height: 468px;
-	background-color: yellow;
+	height: 466px;
+	margin-top: 2px;
+	border-left: 1px solid #b1191a;
+	border-bottom: 1px solid #b1191a;
+}
+.nav-shortcut-one div{
+	height: 31px;
+	padding: 0 15px 0 10px;
+	font:400 14px/31px "microsoft yahe";
+	
+	background-color: #c81623;
+}
+.nav-shortcut-one  div h3{
+	float: left;
+	color: #fff;
+}
+.nav-shortcut-one  div a{
+	float: left;
+	color: #fff;
+}
+.nav-shortcut-one  div i{
+	float: right;
+	color: #fff;
+	font:400 9px/31px "consolar";
+}
+.nav-shortcut-one div:hover{
+	background-color: #fff;
+}
+.nav-shortcut-one div:hover a{
+	color: #C81623;
 }
 .nav-items {
 	float: left;
@@ -41,3 +69,16 @@
 	color: #333333;
 }
 /*nav E*/
+/*main B*/
+.main-slider{
+	float: left;
+	padding: 12px 0 0 220px;
+}
+.main-faster{
+	width: 250px;
+	height: 454px;
+	margin-top: 12px;
+	background-color: yellow;
+	float: right;
+	}
+/*main E*/
