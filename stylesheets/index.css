@@ -1,0 +1,43 @@
+/*nav B*/
+.nav {
+	height: 44px;
+	border-bottom:2px solid #b1191a;
+}
+.nav-shortcut{
+	width: 210px;
+	height: 44px;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+.nav-shortcut-all{
+	width: 210px;
+	height: 44px;
+	background-color: #b1191a;
+}
+.nav-shortcut-all a{
+	display: inline-block;
+	height: 44px;
+	padding-left: 10px;
+	font: 400 16px/44px "microsoft yahei";
+	color: #ffffff;
+}
+.nav-shortcut-one{
+	width: 210px;
+	height: 468px;
+	background-color: yellow;
+}
+.nav-items {
+	float: left;
+}
+.nav-items li{
+	float: left;
+}
+.nav-items a{
+	display: inline-block;
+	height: 44px;
+	padding: 0 20px;
+	font: 16px/44px "microsoft";
+	color: #333333;
+}
+/*nav E*/
