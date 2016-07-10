@@ -95,13 +95,13 @@
 .main-slider .current{
 	background-color: #b61b1f;
 }
-.main-slider .arrow a{
+.arrow a{
 	position: absolute;
 	top: 50%;
 	width: 28px;
 	height: 62px;
 	margin-top: -31px;
-	background-color: #000;
+	background:rgba(0,0,0,0.3);
 	font:400 22px/62px "simsun";
 	text-align: center;
 	color: #fff;
@@ -214,3 +214,25 @@
 	padding-top: 45px;
 }
 /*main E*/
+/*go B*/
+.go{
+	margin:10px auto 30px;
+	overflow: hidden;
+}
+.go-l{
+	float: left;
+	width: 210px;
+}
+.go-r{
+	float: left;
+	width: 1000px;
+	position: relative;
+}
+.go-r ul{
+	width: 600%;
+}
+.go-r li{
+	float: left;
+	margin-right: 1px;
+}
+/*go E*/
