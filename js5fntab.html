@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background-color: #333;
+		}
+		.box{
+			width: 400px;
+			height: 480px;
+			margin: 0 auto;
+			position: relative;
+			margin-top: 20px;
+			background: url(imgjs/loader_ico.gif) no-repeat center #fff;
+			float: left;
+			margin-right: 80px;
+		}
+		.box img{
+			width:400px;
+			height: 480px;
+			position: absolute;
+			top: 0;
+			left: auto;
+		}
+		.box span,.box p{
+			width: 400px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			position: absolute;
+			left: 0;
+			font-weight: 700;
+			color: #fff;
+			background-color: green;
+		}
+		.box span{
+			top: 0;
+		}
+		.box p{
+			bottom: 0;
+		}
+		.box ul{
+			width:40px;
+			position: absolute;
+			top: 0;
+			right: -50px;
+		}
+		.box li{
+			width: 40px;
+			height: 40px;
+			background-color: #666;
+			margin-bottom: 10px;
+		}
+		.box .active{
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		tab("pic1",['imgjs/1.png','imgjs/2.png','imgjs/3.png','imgjs/4.png'],['第1张','第2张','第3张','第4张'],"onclick");
+		tab("pic2",['imgjs/2.png','imgjs/3.png','imgjs/4.png'],['第2张','第3张','第4张'],"onmouseover");
+		function tab(id,arrUrl,arrText,evt){
+			var oDiv = document.getElementById(id);
+			var oImg = oDiv.getElementsByTagName("img")[0];
+			var oSpan = oDiv.getElementsByTagName("span")[0];
+			var oP = oDiv.getElementsByTagName("p")[0];
+
+			// var arrUrl = ['img/1.png','img/2.png','img/3.png','img/4.png'];
+			// var arrText = ['第1张','第2张','第3张','第4张'];
+			var num = 0;//有数组的时候会想到有数值对应下标进行找数组的值
+			var oUl = oDiv.getElementsByTagName("ul")[0];
+			var str='';
+			var aLi = oUl.getElementsByTagName("li");
+			// var oldAli = null;//1 为思路二设置一个空变量，记录上一个状态
+			//先生成几个li标签
+			for(var i=0;i<arrUrl.length;i++){
+				str+="<li></li>";
+			}
+			oUl.innerHTML = str;//将生成的li进行增加到ul里面
+			// oldAli = aLi[num];//2 为思路二设置一个默认的初始化的样式
+			//初始化
+			function fnTab(){
+				oImg.src = arrUrl[num];
+				oSpan.innerHTML = num+1+'/'+arrUrl.length;//  1/4
+				oP.innerHTML = arrText[num];
+				for(var i=0;i<aLi.length;i++){
+						aLi[i].className = '';
+					 }
+				aLi[num].className = "active";	
+			}
+			fnTab();
+			
+
+			//li的点击事件的动作
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].index = i;
+				// // alert(aLi[i].index);
+				// aLi[i].onclick= function(){
+				aLi[i][evt]= function(){
+				num = this.index;//为了将相同的代码整合成一个函数
+				fnTab();
+			  }
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="pic1" class="box">
+		<img src="">
+		<span>数量正在加载中...</span>
+		<p>正在加载.....</p>
+		<ul>
+		</ul>
+	</div>
+	<div id="pic2" class="box">
+		<img src="">
+		<span>数量正在加载中...</span>
+		<p>正在加载.....</p>
+		<ul>
+		</ul>
+	</div>
+</body>
+</html>
