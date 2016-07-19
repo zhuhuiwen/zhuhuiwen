@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background-color: #333;
+		}
+		#pic{
+			width: 400px;
+			height: 480px;
+			margin: 0 auto;
+			position: relative;
+			margin-top: 20px;
+			background: url(imgjs/loader_ico.gif) no-repeat center #fff;
+		}
+		#pic img{
+			width:400px;
+			height: 480px;
+			position: absolute;
+			top: 0;
+			left: auto;
+		}
+		#pic span,#pic p{
+			width: 400px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			position: absolute;
+			left: 0;
+			font-weight: 700;
+			color: #fff;
+			background-color: green;
+		}
+		#pic span{
+			top: 0;
+		}
+		#pic p{
+			bottom: 0;
+		}
+		#pic ul{
+			width:40px;
+			position: absolute;
+			top: 0;
+			right: -50px;
+		}
+		#pic li{
+			width: 40px;
+			height: 40px;
+			background-color: #666;
+			margin-bottom: 10px;
+		}
+		#pic .active{
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oDiv = document.getElementById("pic");
+		var oImg = document.getElementsByTagName("img")[0];
+		var oSpan = document.getElementsByTagName("span")[0];
+		var oP = document.getElementsByTagName("p")[0];
+
+		var arrUrl = ['imgjs/1.png','imgjs/2.png','imgjs/3.png','imgjs/4.png'];
+		var arrText = ['第1张','第2张','第3张','第4张'];
+		var num = 0;//有数组的时候会想到有数值对应下标进行找数组的值
+		var oUl = document.getElementsByTagName("ul")[0];
+		var str='';
+		var aLi = oUl.getElementsByTagName("li");
+		var oldAli = null;//1 为思路二设置一个空变量，记录上一个状态
+		//先生成几个li标签
+		for(var i=0;i<arrUrl.length;i++){
+			str+="<li></li>";
+		}
+		oUl.innerHTML = str;//将生成的li进行增加到ul里面
+		oldAli = aLi[num];//2 为思路二设置一个默认的初始化的样式
+		//初始化
+		oImg.src = arrUrl[num];
+		oSpan.innerHTML = num+1+'/'+arrUrl.length;//  1/4
+		oP.innerHTML = arrText[num];
+		aLi[num].className = "active";	
+
+		//li的点击事件的动作
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].index = i;
+			// alert(aLi[i].index);
+			aLi[i].onclick= function(){
+			//alert(1);初学者可以进行阶段性测试
+			//this.index;
+			oImg.src = arrUrl[this.index];
+			oSpan.innerHTML = this.index+1+'/'+arrUrl.length;//  1/4
+			oP.innerHTML = arrText[this.index];
+			// aLi[this.index].className = "active";
+			//如何处理选择的class选中状态
+			/*
+			思路一:  先全部清空、再给选中的进行添加active样式
+			
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className = '';
+			 }
+			 this.className = 'active';*/
+			 /*思路二:  清空上一个样式、设置当前为active*/
+			 oldAli.className='';//3 清空上一个li的样式
+			 oldAli = this;//5  再将当前的设置给上一个，为了下面的执行
+			 this.className = 'active';//4 设置当前的样式
+		  }
+		}
+
+	}
+	</script>
+</head>
+<body>
+	<div id="pic">
+		<img src="">
+		<span>数量正在加载中...</span>
+		<p>正在加载.....</p>
+		<ul>
+		</ul>
+	</div>
+</body>
+</html>
