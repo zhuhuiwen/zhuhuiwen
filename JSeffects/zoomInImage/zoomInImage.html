@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* { 
+			padding: 0; 
+			margin: 0; 
+		}
+		li { 
+			list-style: none; 
+		}
+		body { 
+			background: #ccc; 
+		}
+		img { 
+			border: none; 
+		}
+		ul { 
+			width: 390px; 
+			padding: 0 0 10px 10px; 
+			border: 10px solid #ccc; 
+			zoom:1; 
+			background: #f6f6f6; 
+			margin: 50px auto 0; 
+		}
+		ul:after { 
+			content: '\20'; 
+			display: block; 
+			clear: both; 
+		}
+		li { 
+			width: 120px; 
+			height: 90px; 
+			margin: 10px 10px 0 0; 
+			float: left; 
+			display: inline; 
+		}
+		img { 
+			width: 120px; 
+			display: block; 
+		}
+	</style>
+<script type="text/javascript">
+		var aImgHeight=[];
+		var aImgWidth=[];
+		var aImgs=[];
+		var iZindexNext=2;
+
+		var aTimers=[];
+
+window.onload=function ()
+{
+	var aLis=[];
+	var oImg=null;
+	var i=0;
+	
+	aLis=document.getElementsByTagName('li');
+	
+	for(i=0;i<aLis.length;i++)
+	{
+		oImg=aLis[i].getElementsByTagName('img')[0];
+		aImgs.push(oImg);
+		
+		oImg.index=i;
+		
+		aImgHeight.push(oImg.offsetHeight);
+		aImgWidth.push(oImg.offsetWidth);
+		
+		oImg.onmouseover=doZoom;
+		oImg.onmouseout=doRecover;
+	}
+	
+	for(i=0;i<aImgs.length;i++)
+	{
+		aImgs[i].style.width=aImgWidth[i]+'px';
+		aImgs[i].style.height=aImgHeight[i]+'px';
+		aImgs[i].style.position='absolute';
+		aImgs[i].style.left=0+'px';
+		aImgs[i].style.top=0+'px';
+		aLis[i].style.position='relative';
+		aLis[i].style.zIndex='1';
+	}
+};
+
+function doZoom()
+{
+	var index=this.index;
+	
+	this.parentNode.parentNode.style.zIndex=iZindexNext++;
+	
+	if(aTimers[index])
+	{
+		clearInterval(aTimers[index]);
+	}
+	
+	aTimers[index]=setInterval("doZoomInner("+true+", "+index+")", 30);
+}
+
+function doRecover()
+{
+	var index=this.index;
+	
+	if(aTimers[index])
+	{
+		clearInterval(aTimers[index]);
+	}
+	
+	aTimers[index]=setInterval("doZoomInner("+false+", "+index+")", 30);
+}
+
+function doZoomInner(bZoom, index)
+{
+	var xStep=0;
+	var yStep=0;
+	var l,t,w,h;
+	
+	if(bZoom)
+	{
+		if(aImgs[index].offsetWidth==aImgWidth[index]*2 && aImgs[index].offsetHeight==aImgHeight[index]*2)
+		{
+			clearInterval(aTimers[index]);
+			aTimers[index]=null;
+			return;
+		}
+	}
+	else
+	{
+		if(aImgs[index].offsetWidth==aImgWidth[index] && aImgs[index].offsetHeight==aImgHeight[index])
+		{
+			clearInterval(aTimers[index]);
+			aTimers[index]=null;
+			return;
+		}
+	}
+	
+	xStep=(aImgWidth[index]*2-aImgWidth[index])/10;
+	yStep=(aImgHeight[index]*2-aImgHeight[index])/10;
+
+	if(bZoom)
+	{
+		w=aImgs[index].offsetWidth+xStep;
+		h=aImgs[index].offsetHeight+yStep;
+	}
+	else
+	{
+		w=aImgs[index].offsetWidth-xStep;
+		h=aImgs[index].offsetHeight-yStep;
+	}
+	
+	if(bZoom)
+	{
+		if(w>=aImgWidth[index]*2)
+		{
+			w=aImgWidth[index]*2;
+		}
+		
+		if(h>=aImgHeight[index]*2)
+		{
+			h=aImgHeight[index]*2;
+		}
+	}
+	else
+	{
+		if(w<=aImgWidth[index])
+		{
+			w=aImgWidth[index];
+		}
+		
+		if(h<=aImgHeight[index])
+		{
+			h=aImgHeight[index];
+		}
+	}
+	
+	l=(aImgWidth[index]-w)/2;
+	t=(aImgHeight[index]-h)/2;
+	
+	aImgs[index].style.width=w+'px';
+	aImgs[index].style.height=h+'px';
+	aImgs[index].style.left=l+'px';
+	aImgs[index].style.top=t+'px';
+}
+</script>
+<script type="text/javascript" src="miaov.js">
+</script>
+</head>
+
+<body>
+	<ul>
+	    <li><a href="javascript:;"><img src="img/1.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/2.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/3.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/4.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/5.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/6.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/7.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/8.jpg"></a></li>
+	    <li><a href="javascript:;"><img src="img/9.jpg"></a></li>
+	</ul>
+</body>
+</html>
