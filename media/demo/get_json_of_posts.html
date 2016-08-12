@@ -1,0 +1,157 @@
+---
+layout: null
+title: jQuery 实现异步加载文章列表
+keywords: getJSON, GitHub Pages
+description: jQuery 实现异步加载文章列表
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{site.author.name}}" />
+	<meta name="keywords" content="{{ page.keywords }}" />
+	<meta name="description" content="{{ page.description }}" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.root }}/{{ site.asset_dir.images }}/favicon.ico">
+    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+    <link rel="stylesheet" type="text/css" href="{{ site.root }}/{{ site.asset_dir.stylesheets }}/demo_style.css" />
+	<title>{{ page.title }}</title>
+	{% include baidu_statistics.html %}
+	{% include google_analytics.html %}
+	<script type="text/javascript" src="{{ site.root }}/{{ site.asset_dir.javascripts }}/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style type="text/css">
+		.recent {
+			list-style-type: square;
+			list-style-position: outside;
+			padding: 20px 40px;
+			text-align: justify;
+			margin: 50px auto;
+			display: block;
+		}
+		.date {
+			text-align: left;
+			margin:auto 40px auto 5px;
+		}
+		.loading{float: left;padding: 50px 20px 10px;font-weight:bold;}
+		.loading img{padding-right: 10px;}
+		.try_again{padding:5px;margin-left:20px;bottom:80px;position:absolute;font-style: italic;display:block;}
+		.disabled, .disabled:focus{color: #777;cursor: not-allowed;}
+		#cardflip {
+			width: 200px;
+			height: 200px;
+			float:  right;
+			right: 20px;
+			position: relative;
+			margin: 60px auto;
+			-webkit-perspective: 800px;
+			-moz-perspective: 800px;
+			-o-perspective: 800px;
+			perspective: 800px;
+		}
+		#card_count {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			-webkit-transition: -webkit-transform 1s;
+			-moz-transition: -moz-transform 1s;
+			-o-transition: -o-transform 1s;
+			transition: transform 1s;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			line-height: 200px;
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-size: 140px;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		.card5{background: #2c3e50;}
+		.card4{background: #8e44ad;}
+		.card3{background-color: #27ae60;}
+		.card2{background: #3498db;}
+		.card1{background-color: #e74c3c;}
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="top">
+			<a href="{{ site.root }}/">Skip to home</a>
+			<span style="float: right;">{{ site.subtitle }}</span>
+		</div>
+		<div class="main">
+			<h1>{{ page.title }}</h1>
+			<div class="content">
+			<div class="loading"><img src="{{ site.root }}/{{ site.asset_dir.images }}/loading.gif">Loading...</div>
+			<div id="cardflip"><div id="card_count" class="card5">5</div></div>
+			<div id="post_list"></div>
+			<button class="try_again" style="display:none;" click="return false;">Try again !</button>
+			<script>
+				function timeCount() {
+					var c=4;
+					var t;
+					function timedCount() {
+						if (c === 0) {
+							$("#card_count").fadeOut("slow", function() {
+								if (!! _POSTS.list) {
+									  var data = _POSTS.list;
+									  var content = "<ul id=\"posts\" class=\"compact recent\">";
+									  $.each(data,
+									  function(i, item) {
+										content += "<li><span class=\"date\">" + item.date + "</span><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+									  });
+									  content += "</ul>";
+									  $(".loading").remove();
+									  $("#post_list").hide();
+									  $("#post_list").append(content);
+									  $("#post_list").fadeIn("slow", function(){if($(".try_again").hasClass("disabled"))$(".try_again").removeClass("disabled");else $(".try_again").show();});
+								} else {
+									$(".loading").html("<font color='red'>Load Error</font>");
+									console.log("ERROR");
+								}
+							});
+							return;
+						}
+						$("#card_count").addClass("card"+c);
+						$("#card_count").html(c);
+						c=c-1;
+						t=setTimeout(timedCount, 1000);
+					}
+					t=setTimeout(timedCount, 500);
+				}
+				
+				$(document).ready(function() {
+					//$.getJSON("{{ site.demo_dir }}/posts_list.json",
+					//function(data) {
+					$.getScript("{{ site.demo_dir }}/posts_list.js",
+					function() {
+						timeCount();
+					});
+					$(".try_again").on('click',function() {
+						if ($(this).hasClass("disabled")) {
+							return;
+						}
+						$(this).addClass("disabled");
+						$("#posts").remove();
+						$("#card_count").html(5);
+						$("#card_count").attr("class", "card5");
+						$("#card_count").fadeIn();
+						setTimeout(timeCount, 500);
+					});
+				});
+				
+			</script>
+			</div>
+		</div>
+	</div>
+	<div style="display:none">
+	{% include cnzz_statistics.html %}
+	</div>
+  </body>
+</html>

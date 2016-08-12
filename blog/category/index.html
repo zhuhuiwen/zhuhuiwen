@@ -1,0 +1,29 @@
+---
+title: Categories
+layout: page
+navbar: archive
+footer: false
+---
+
+<div id="blog-category-tag">
+	{% assign pages_list = site.categories %}  
+    {% include pages_list.html %}
+</div>
+
+<!--
+// Alfred: If doesn't sort the categories, then can use below to traverse the posts. So does the tags.
+
+{% raw %}
+{% for category in site.categories %}
+	<h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+	<ul>
+		{% for post in category[1] %}
+		<li>
+			<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endfor %}
+{% endraw %}
+-->
