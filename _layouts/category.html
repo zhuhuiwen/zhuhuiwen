@@ -4,9 +4,8 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ page.title }} - {{ site.name }} - 作者:{{ site.author }}"/> 
-	{% if page.tags.size > 0%}<meta name="keywords" content="{% for tag in page.tags %}{% if tag != "" %}{{ tag }}{% if forloop.index != page.tags.size %},{% endif %}{% endif %}{% endfor %}"/>{% endif %}
-    <title>{{ page.title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ page.title }} - {{ site.name }} - 作者:{{ site.author }}"/>
+    <title>{% for cat in site.all_categories %}{% if page.category == cat[0] %}栏目：{{cat[1]}} - {{ site.name }}{% endif %}{% endfor %}</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
@@ -61,7 +60,22 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-          {{ content }}
+			<!-- Navi -->
+			{% for cat in site.all_categories %}{% if page.category == cat[0] %}<a href="/">首页</a>&nbsp;>&nbsp;<a href="{{cat[2]}}">{{cat[1]}}</a>&nbsp;>&nbsp;列表{% endif %}{% endfor %}
+			<!-- List -->
+			<ul class="list-unstyled">
+			{% for post in site.categories[page.category] %}
+			  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+			  {% if year != y %}
+				{% assign year = y %}
+				<h2>{{ post.date | date: '%Y' }}</h2> 
+			  {% endif %}
+			  <li>
+				<h4><span>{{ post.date | date:"%Y-%m-%d" }}</span>&raquo;
+				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+			  </li> 
+			{% endfor %}
+			</ul>
         </div>
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
