@@ -1,18 +1,30 @@
-My blog, powered by <i>Alfred Sun</i>:   http://Alfred-Sun.github.io
+Jekyll博客模板
+================
 
-# This is the data for my blog
+#### 1.浏览
+http://www.panxw.com, 支持PC与智能机访问。  
 
-It is automatically transformed by "Jekyll":http://github.com/mojombo/jekyll into a static site whenever I push this repository to GitHub.
+#### 2.模板使用
+修改_config.yml与_includes目录下相关文件进行配置。  
+评论代码推荐“多说”，统计代码推荐cnzz。  
+模板可任意使用，但请保留本站友情链接。  
 
-I was tired of having my blog posts end up in a database off on some remote server. That is backwards. I've lost valuable posts that way. I want to author my posts locally in Textile or Markdown. My blog should be easily stylable and customizable any way I please. It should take care of creating a feed for me. And most of all, my site should be stored on GitHub so that I never lose data again.
+#### 3.联系作者
+QQ交流群: 168563980  
+Github：https://github.com/panxw  
 
-# License
 
-The following directories and their contents are Copyright Alfred Sun. You may not reuse anything therein without my permission:
+## License
 
-* _posts/
-* _layout/
-* assets/
-* media/
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to https://github.com/Alfred-Sun/Alfred-Sun.github.io would be appreciated, but is not required.
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+

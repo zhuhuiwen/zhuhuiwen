@@ -1,7 +1,2 @@
----
-layout: null
----
 User-agent: *
-Disallow: /assets/
-
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: http://www.panxw.com/atom.xml
