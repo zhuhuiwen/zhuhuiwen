@@ -1,15 +1,28 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: "关于：About"
 ---
+Welcome to visit my blog!
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+#### 1.Personal Info
+Name: Xuewen Pan(潘学文)  
+Gender: Male  
+City: Wuhan, China  
+Career: Software developer(Android&Linux&Web)  
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+#### 2.My Links
+Blog: <http://www.panxw.com>  
+GitHub: <https://github.com/panxw>  
+LinkedIn: <http://www.linkedin.com/in/panxw>  
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+
+#### 3.Contract
+Email: winfirm#163.com  
+QQ: 85902258  
+
+### 4.Domain For Sale
+danbaili.com  
+fangxinyu.com  
+maicaiwa.com  
+babytoycar.com  
+youth168.com  
