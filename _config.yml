@@ -23,12 +23,12 @@ zhihu_username: 卡果
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 当你全心全意梦想着什么的时候，整个宇宙都会协同起来，助你实现自己的心愿。
+description_footer: 整个宇宙都会协同起来，助你实现自己的心愿。
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
+duoshuo_shortname: waxun
 disqus_shortname: #Sgaohaoyang
 
 # statistic analysis 统计代码
