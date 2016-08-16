@@ -27,12 +27,12 @@
         core_tech: 'jQuery CSS',
         description: '使用 animate 方法，做到兼容 IE8。曾在联想服务官网上线3个月。'
     }, {
-        demo_link: 'http://gaohaoyang.github.io/ToDo-WebApp/',
-        img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/blog-todoWebApp.png',
-        code_link: 'https://github.com/Gaohaoyang/ToDo-WebApp',
-        title: '百度前端学院 task0004 ToDo 应用(移动端)',
-        core_tech: 'JavaScript LocalStorage requireJS Sass Gulp XSS',
-        description: '在任务三中，做了一个 PC 端的 ToDo 应用。任务四是将它优化，以适应移动端设备。'
+        demo_link: 'https://waxun.github.io/many-pic-show/',
+        img_link: 'https://ooo.0o0.ooo/2016/08/16/57b33776c156b.png',
+        code_link: 'https://github.com/waxun/many-pic-show',
+        title: 'many-pic-show',
+        core_tech: 'HTML CSS JavaScript',
+        description: '了解层级关系'
     }, {
         demo_link: 'http://gaohaoyang.github.io/baidu-ife-practice/task0003/',
         img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-todo.png',
