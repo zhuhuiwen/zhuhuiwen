@@ -20,26 +20,26 @@
         core_tech: 'HTML CSS',
         description: '仿照京东网站<a href ="http://www.jd.com/">http://www.jd.com/</a> 的活动主题页。'
     }, {
-        demo_link: 'http://gaohaoyang.github.io/mask-fade-out/',
-        img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-fade-out.png',
-        code_link: 'https://github.com/Gaohaoyang/mask-fade-out',
-        title: '遮罩层按指定路径缩小消失',
-        core_tech: 'jQuery CSS',
-        description: '使用 animate 方法，做到兼容 IE8。曾在联想服务官网上线3个月。'
+        demo_link: 'https://waxun.github.io/movement/Seamlessrolling.html',
+        img_link: 'https://ooo.0o0.ooo/2016/08/16/57b33c11684d7.png',
+        code_link: 'https://github.com/waxun/movement',
+        title: 'Seamlessrolling',
+        core_tech: 'JavaScript CSS',
+        description: '无间隙滚动，可支持正反方向控制'
     }, {
-        demo_link: 'https://waxun.github.io/many-pic-show/',
+        demo_link: 'https://waxun.github.io/movement/many-pic-show.html',
         img_link: 'https://ooo.0o0.ooo/2016/08/16/57b33776c156b.png',
-        code_link: 'https://github.com/waxun/many-pic-show',
+        code_link: 'https://github.com/waxun/movement',
         title: 'many-pic-show',
         core_tech: 'HTML CSS JavaScript',
         description: '了解层级关系'
     }, {
-        demo_link: 'http://gaohaoyang.github.io/baidu-ife-practice/task0003/',
-        img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-todo.png',
-        code_link: 'https://github.com/Gaohaoyang/baidu-ife-practice/tree/master/task0003',
-        title: '百度前端学院 task0003 ToDo 应用',
-        core_tech: 'JavaScript LocalStorage',
-        description: '任务三，ToDo 单页应用，主要使用了 LocalStorage 存储数据，使用 JSON 模拟了 3 张数据表。'
+        demo_link: '',
+        img_link: 'https://ooo.0o0.ooo/2016/08/16/57b340407981b.png',
+        code_link: 'https://github.com/waxun/Ajax',
+        title: 'Ajax',
+        core_tech: 'Ajax JavaScript',
+        description: 'Ajax接口调用、数据处理、下拉加载下页数据'
     }, {
         demo_link: 'http://gaohaoyang.github.io/ife/task/task0002/work/Gaohaoyang/task0002_5.html',
         img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-drag.png',
