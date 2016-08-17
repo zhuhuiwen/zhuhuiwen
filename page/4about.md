@@ -48,6 +48,7 @@ icon: heart
 ## 联系我
 
 * GitHub：[waxun](https://github.com/waxun)
+* ITEYE : [之前用的博客](http://yuzhouxiner.iteye.com/)
 * email：waxun163@163.com
 
 专用后端的技术博客
