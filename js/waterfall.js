@@ -40,6 +40,13 @@
         title: 'Ajax',
         core_tech: 'Ajax JavaScript',
         description: 'Ajax接口调用、数据处理、下拉加载下页数据'
+    },{
+        demo_link: '',
+        img_link: 'https://ooo.0o0.ooo/2016/08/16/57b340407981b.png',
+        code_link: 'https://github.com/waxun/bootstrap',
+        title: 'Bootstrap',
+        core_tech: 'Bootstrap 仿bootcss',
+        description: 'Bootstrap栅格布局的处理'
     }];
 
     contentInit(demoContent) //内容初始化
