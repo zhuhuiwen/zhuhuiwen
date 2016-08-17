@@ -25,8 +25,6 @@ git clone git@gitlab.xxx.com:xxxxx.git
 
 ## 解决方法
 
-**刚刚开周会的时候，自己洋洋得意的分享我的解决方案，但是……经过与团队成员的的讨论，自己的方法弱爆了，现在把更优雅的方法写一下。原来写的方法并不太适合用在这个场景里。** 我之前写的方法在文章后面。
-
 直接使用命令
 
 ```
@@ -54,51 +52,4 @@ origin/master
 
 ```
 git checkout origin/daily/1.4.1
-```
-
-就好了。。。
-
-## 原来的解决方案
-
-**其实我原来写的这个方法更多的是：设置已有的本地分支跟踪一个刚刚拉取下来的远程分支，或者想要修改正在跟踪的上游分支。**
-
-我们在本地先建立一个分支，建议名称和远程的想要同步的分支名称一样。
-
-```
-git branch daily/1.4.1
-```
-
-在切换到这个本地分支
-
-```
-git checkout daily/1.4.1
-# Switched to branch 'daily/1.4.1'
-```
-
-接下来就可以去建立上游分支的关联了，但是这个命令比较长，不好记，我们可以直接先`pull`一下，git 会提示我们相应的操作和命令。
-
-```
-git pull
-There is no tracking information for the current branch.
-Please specify which branch you want to merge with.
-See git-pull(1) for details.
-
-    git pull <remote> <branch>
-
-If you wish to set tracking information for this branch you can do so with:
-
-    git branch --set-upstream-to=origin/<branch> daily/1.4.1
-```
-
-我们看到最后一行，执行这个命令，即可完成与上游分支的关联。
-
-```
-git branch --set-upstream-to=origin/daily/1.4.1 daily/1.4.1
-# Branch daily/1.4.1 set up to track remote branch daily/1.4.1 from origin.
-```
-
-然后再`pull`一下就好了！
-
-```
-git pull
 ```
