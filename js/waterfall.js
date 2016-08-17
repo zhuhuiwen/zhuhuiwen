@@ -42,9 +42,9 @@
         description: 'Ajax接口调用、数据处理、下拉加载下页数据'
     },{
         demo_link: 'https://waxun.github.io/html5/canvas/the-mouse-line.html',
-        img_link: 'https://ooo.0o0.ooo/2016/08/16/57b340407981b.png',
+        img_link: 'https://ooo.0o0.ooo/2016/08/17/57b476a2d7bb4.png',
         code_link: 'https://github.com/waxun/html5',
-        title: 'Bootstrap',
+        title: 'HTML5',
         core_tech: 'HTML5 canvas',
         description: '初学canvas，做个鼠标划线的demo'
     }];
