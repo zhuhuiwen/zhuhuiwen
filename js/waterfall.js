@@ -41,12 +41,12 @@
         core_tech: 'Ajax JavaScript',
         description: 'Ajax接口调用、数据处理、下拉加载下页数据'
     },{
-        demo_link: '',
+        demo_link: 'https://waxun.github.io/html5/canvas/the-mouse-line.html',
         img_link: 'https://ooo.0o0.ooo/2016/08/16/57b340407981b.png',
-        code_link: 'https://github.com/waxun/bootstrap',
+        code_link: 'https://github.com/waxun/html5',
         title: 'Bootstrap',
-        core_tech: 'Bootstrap 仿bootcss',
-        description: 'Bootstrap栅格布局的处理'
+        core_tech: 'HTML5 canvas',
+        description: '初学canvas，做个鼠标划线的demo'
     }];
 
     contentInit(demoContent) //内容初始化
