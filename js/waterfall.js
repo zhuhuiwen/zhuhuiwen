@@ -41,6 +41,13 @@
         core_tech: 'Ajax JavaScript',
         description: 'Ajax接口调用、数据处理、下拉加载下页数据'
     },{
+        demo_link: 'https://waxun.github.io/jquery/img-effects/',
+        img_link: 'https://ooo.0o0.ooo/2016/08/17/57b47b52d6b51.png',
+        code_link: 'https://github.com/waxun/jquery',
+        title: 'JQuery',
+        core_tech: 'JQuery',
+        description: '实现鼠标hover时图片特效'
+    },{
         demo_link: 'https://waxun.github.io/html5/canvas/the-mouse-line.html',
         img_link: 'https://ooo.0o0.ooo/2016/08/17/57b476a2d7bb4.png',
         code_link: 'https://github.com/waxun/html5',
