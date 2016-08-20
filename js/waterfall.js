@@ -56,7 +56,7 @@
         description: '初学canvas，做个鼠标划线的demo'
     },{
         demo_link: 'https://waxun.github.io/html5/canvas/the-mosaic-effect.html',
-        img_link: 'https://ooo.0o0.ooo/2016/08/17/57b476a2d7bb4.png',
+        img_link: 'https://ooo.0o0.ooo/2016/08/20/57b87cc325fd0.png',
         code_link: 'https://github.com/waxun/html5',
         title: 'HTML5',
         core_tech: 'HTML5 canvas',
