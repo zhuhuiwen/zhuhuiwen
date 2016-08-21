@@ -27,6 +27,9 @@ Chrome插件
 
 *  [方片收集](https://chrome.google.com/webstore/search/%E6%96%B9%E7%89%87%E6%94%B6%E9%9B%86?hl=zh-CN)
 
+搜集软件
+
+*  [switchhost](http://pan.baidu.com/s/1o7WSE8M)
 
 ## Comments
 
