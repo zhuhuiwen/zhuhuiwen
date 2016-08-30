@@ -17,6 +17,8 @@ tags:  HTML5
   需要apache服务器，本章这里使用集成环境的wamp,配置www.a.com  www.b.com
 
 
+
+
 *  步骤一:
 	
       1. wamp安装目录下找到httpd.conf配置文件
