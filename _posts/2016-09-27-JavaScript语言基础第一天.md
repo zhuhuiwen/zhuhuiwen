@@ -37,29 +37,38 @@ tags:  javascript语法
 
 
 ## js组成 ##
+
 - ECMA   语法规范 5天
 - DOM 操作页面上的元素  14天
 - BOM 操作浏览器的一些功能 1天
+
 ## 网页组成 ##
+
 - html  页面内容的显示，结构
 - css  页面的样式      样式
 - js  页面的交互       行为
 	- 结构样式行为分离
+
 ## 输入输出语句 ##
+
 1. alert() 弹出警告
 2. document.write() 页面输出
 3. console.log()  控制台输出
 4. prompt() 输入语句
 5. confirm()  确认语句
 9/27/2016 10:04:02 AM 
+
 ## 注释 ##
+
 1. 单行注释  //
 2. 多行注释  /**/
 3. 文档注释  /**   */
 4. 注释的作用:
 	- 模块的划分
 	- 解释代码
+
 ## script ##
+
 - 位置
 	-  script书写位置: 推荐写到head或者</body>标签上面
 	-  书写js的两种方式
@@ -70,6 +79,7 @@ tags:  javascript语法
 			- 如果script指定了src属性，就不要在script里面写内容
 			
 ## 为什么使用变量 ##
+
 1. 变量
 	- 可以把变量看成存储数据的容器
 2. 变量的声明和赋值[常用]
@@ -80,7 +90,9 @@ tags:  javascript语法
 	- console.log(num)  一个变量，不声明不赋值，会报错，
 		- js是一行一行往下执行，一旦发生了错误，就停止执行
 			- console.log(num); console.log("1111");
+
 ## 变量的命名规范 ##
+
 1. 命名规则(法律)
 	- 必须是字母、数字、下划线、$，并且不能以数字开头
 	- 不能是关键字和保留字
@@ -90,7 +102,9 @@ tags:  javascript语法
 	- 驼峰标志
 		- 推荐使用
 	- 下划线
+
 ## 定义变量时的内存表示 ##
+
 1. 栈
 	- 空间比较小，但是存取速度非常快
 	- 存取基本数据类型
@@ -104,7 +118,9 @@ tags:  javascript语法
 	- `typeof(num)`
 9/27/2016 11:50:21 AM 
 9/27/2016 2:40:42 PM 
+
 ## 数据类型 ##
+
 1. 简单数据类型
 	- Number
 	- String
@@ -116,7 +132,9 @@ tags:  javascript语法
 	- Object
 	- Array
 	- Date
+
 ## Number数值类型 ##
+
 1. 进制问题
 	- 二进制: 逢2进1   
 	- 八进制: 逢8进1  017 8+7=15 ；8进制是0开头的
@@ -139,7 +157,9 @@ tags:  javascript语法
 		- isNaN(num)  
 			- true   证明这个而不是数字类型
 			- false  证明这个是数字类型
+
 ## String类型 ##
+
 1. 转义字符
 	- \n 换行
 	- \t 制表符
@@ -154,11 +174,14 @@ tags:  javascript语法
 	- + 如果两边都是数值，就是数值相加的功能
 
 ## Boolean类型 ##
+
 1. ECMA中所有类型的值都可以转换成布尔类型的值
 2. null undefiend 等补充
 
 # 类型转换 #
+
 ## 转换成字符串 ##
+
 1. String(num)
 2. num.toString()
 3. num+" "
@@ -167,6 +190,7 @@ tags:  javascript语法
 		- .toString() undefiend和null来说没有这个方法
 
 ## 转换成数值类型 ##
+
 1. Number("111")
 2. parseInt(str)
 	- 转换原理: 从开头读取数字，只要督导一个非数字，就结束兵返回值
@@ -174,19 +198,26 @@ tags:  javascript语法
 	- 跟parseInt一样，但是parseFloat能识别第一个小数点
 	- var str = "200px";parseInt(str)   200
 4. "111"-0
+
 ## 转换成布尔类型 ##
+
 1. Boolean()
 	- 能转换成false的几种情况: null、undefiend、0、“”、NaN
 2. console.log(!!str)
+
 ## webstorm快捷键 ##
+
 1. ctrl+alt+l
+
 # 运算符 #
 
     2+3=  5  5   
     2+3 = 5  4
     2+2 = 4  3
     2+2 = 4  4
+
 ## 自增自建[重点] ##
+
 	- a++ 先返回a，然后让a自增
 	- ++a 先自增，再返回结果
 
@@ -201,7 +232,9 @@ tags:  javascript语法
 	    //  a = 3  2 2     4
 	    var a = 1; var b = ++a + a++; console.log(b);
     </script>
+
 ## 一元运算符 ##
+
 1. 逻辑运算符
 	- || 对于来说，只要一个为true，就是true
 	- &&，只要有一个是false，就是false
@@ -220,13 +253,19 @@ tags:  javascript语法
     		num = num - 0;
     		num = num||0;
     		console.log(num);// 0 检测功能，提供一个默认值
+
 ## 比较运算符 ##
+
 1. ==  比较的是内容
 2. === 比较的内容和类型
 9/27/2016 5:17:23 PM 
+
 # 程序三种结构 #
+
 ## 顺序结构 ##
+
 ## 选择结构 ##
+
 1. if else
 	- 处理的逻辑比较复杂的时候
 2. 三元运算符
