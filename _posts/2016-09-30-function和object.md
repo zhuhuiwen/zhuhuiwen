@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "js基础第三天function和object"
+categories: javascript
+tags:  javascript语法
+---
+
+* content
+{:toc}
+
 9/30/2016 8:38:05 AM 
 
 # function #

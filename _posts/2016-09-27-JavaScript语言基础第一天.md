@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "js基础第一天"
+categories: javascript
+tags:  javascript语法
+---
+
+* content
+{:toc}
+
 9/27/2016 8:42:09 AM 
 ## 国庆复习 ##
 - css盒子模型
