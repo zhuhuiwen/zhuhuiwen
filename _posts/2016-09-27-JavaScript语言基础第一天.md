@@ -9,17 +9,26 @@ tags:  javascript语法
 {:toc}
 
 9/27/2016 8:42:09 AM 
+
 ## 国庆复习 ##
+
 - css盒子模型
 - 浮动
 - 定位
+
 # 分类 #
+
 ## 三天基础 ##
+
 - 变量
 - 补充
+
 ### 三天目标 ###
+
 - 掌握js基础语法
+
 ## 浏览器组成 ##
+
 - user interface :用户界面
 - redering engine   渲染引擎: 解析html、+css
 - js interface 解析js
