@@ -14,6 +14,9 @@
 - redering engine   渲染引擎: 解析html、+css
 - js interface 解析js
 
+
+
+
 ## js组成 ##
 - ECMA   语法规范 5天
 - DOM 操作页面上的元素  14天
